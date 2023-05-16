@@ -1,0 +1,1 @@
+> Projeto cridao em React/TypeScript para ser um criador de personagem de RPG. Este projeto ira contar com formularios para a criação de um personagem e futuramente sera ligado a outro projeto que ira renderizar a ficha de RPG basedao no personagem criado aqui.
