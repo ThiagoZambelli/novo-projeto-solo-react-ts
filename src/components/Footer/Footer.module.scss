@@ -1,0 +1,19 @@
+@import 'styles/_variaveis.module.scss';
+
+.footer{
+    background-color: $color-2-hex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-6-hex;
+    padding: 2em 0;
+
+    img{
+        max-width: 150px;
+    }
+    &__ancora{
+        text-decoration: none;
+        color: $color-5-hex;
+        border-bottom: 1px solid $color-5-hex;
+    }
+}

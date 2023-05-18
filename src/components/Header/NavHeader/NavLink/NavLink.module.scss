@@ -1,0 +1,15 @@
+@import 'styles/_variaveis.module.scss';
+
+.link{
+    text-decoration: none;
+    font-size: 2rem;
+    color: $color-5-hex;
+    font-family: $fonte-destaque;    
+    padding: 0 .2em;
+    font-weight: 300;
+}
+
+.linkAtivo{    
+    color: $color-4-hex;    
+    border-bottom: 2px solid $color-4-hex;
+}

@@ -1,0 +1,8 @@
+@import 'styles/_variaveis.module.scss';
+
+.navHeader{
+    min-width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
