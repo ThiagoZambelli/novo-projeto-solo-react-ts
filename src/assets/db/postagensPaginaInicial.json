@@ -1,0 +1,11 @@
+[
+    {
+        "titulo": "Bem-Vindo a Forja de Lendas",
+        "texto": "Aqui nos damos todas as ferramentas necessarias para auxiliar na sua grande historia",
+        "id": 1
+    },{
+        "titulo": "Quem Somos",
+        "texto": "Este projeto consiste em ser uma plataforma para jogadores de RPG. Aqui, temos a intenção de dar assas a sua imaginação, para que o limite de suas historia seja apenas sua criatividade!",
+        "id": 2
+    }
+]

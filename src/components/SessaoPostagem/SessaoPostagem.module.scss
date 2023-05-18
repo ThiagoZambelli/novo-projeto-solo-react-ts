@@ -1,0 +1,49 @@
+@import 'styles/_variaveis.module.scss';
+
+.postagem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 4rem;
+    row-gap: 4rem;
+    margin: 4rem 0;
+    flex-wrap: wrap;
+
+
+    &__textos {
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 350px;
+        min-width: 300px;
+        text-align: justify;
+        line-height: 2em;
+        h3{
+            font-size: 2rem;
+            margin: 1em 0;
+            color: $color-2-rgba;
+            font-family: $fonte-destaque;
+            line-height: 1.5em;
+            text-align: center;
+        }
+
+        p {
+            flex-wrap: wrap;
+            font-size: 1.5rem;
+            color: $color-3-rgba;
+        }
+    }
+
+    &__imagem {
+        max-width: 350px;
+        min-width: 300px;
+        border-radius: 2rem;
+        box-shadow: 0 0 12px $color-2-hex;
+    }
+}
+
+.imagemEsquerda {
+    order: 3;
+}
