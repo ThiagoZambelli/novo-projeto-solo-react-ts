@@ -12,7 +12,7 @@
         row-gap: 2rem;
         flex-wrap: wrap;
 
-        &__descricao{
+        &__descricao {
             color: $color-5-hex;
         }
 
@@ -23,8 +23,8 @@
             column-gap: 2rem;
             row-gap: 2rem;
             flex-wrap: wrap;
-        }      
-       
+        }
+
 
         legend {
             text-align: center;
@@ -37,22 +37,27 @@
     }
 }
 
-.botao{
+.botao {
     font-size: 1.2rem;
     padding: .5em 1em;
     border-radius: 1em;
     background-color: transparent;
-    border: 2px solid $color-2-rgba;
+    border: 2px solid $color-2-hex;
     cursor: pointer;
 
-    &__habilitado{
-        border: 2px solid $color-3-rgba;
+    &__habilitado {
+        border: 2px solid $color-3-hex;
         background-color: $color-1-hex;
         color: $color-6-hex;
         box-shadow: 0 0 6px $color-1-hex;
+        transition: .5s;
 
-        &:active{
-            border: .5px solid $color-3-rgba;
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        &:active {
+            border: .5px solid $color-3-hex;
             color: $color-5-hex;
         }
     }

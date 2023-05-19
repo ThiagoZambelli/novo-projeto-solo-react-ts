@@ -1,0 +1,28 @@
+@import 'styles/_variaveis.module.scss';
+
+.nomes{
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2rem;
+    text-transform: uppercase;
+    
+    &__jogador{       
+        color: $color-6-hex;
+        background-color: $color-1-hex;
+        padding: .3em 1em;
+        border-radius: .5em 0 0 .5em;
+        border: 2px solid $color-1-hex;
+        box-shadow: 0 0 6px $color-3-hex;
+    }
+    &__personagem{
+        padding: .3em 1em;
+        color: $color-1-hex;
+        border: 2px solid $color-1-hex;
+        box-shadow: 0 0 12px $color-3-hex;
+        text-decoration: underline;
+        font-family: $fonte-destaque;
+    }
+}

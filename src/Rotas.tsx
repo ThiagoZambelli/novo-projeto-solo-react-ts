@@ -1,3 +1,4 @@
+import Antecedentes from 'pages/PaginaCadastro/Antecedentes';
 import PaginaComum from 'pages/PaginaComum';
 import PaginaForja from 'pages/PaginaForja';
 import PaginaInicial from 'pages/PaginaInicial';
@@ -9,6 +10,7 @@ export default function Rotas() {
             <Route path='/' element={<PaginaComum />}>
                 <Route index element={<PaginaInicial />} />
                 <Route path='forja' element={<PaginaForja />} />
+                <Route path='forja/antecedentes' element={<Antecedentes />} />                
             </Route>
         </Routes>
     )

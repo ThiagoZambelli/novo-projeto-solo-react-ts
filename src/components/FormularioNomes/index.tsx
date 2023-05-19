@@ -2,11 +2,13 @@ import InputT from "components/InputT";
 import styles from './FormularioNomes.module.scss';
 import { useEffect, useState } from "react";
 import usePegaNomes from "state/hooks/usePegaNomes";
+import { useNavigate } from "react-router-dom";
 
 
 export default function FormularioNomes() {
     const [habilitado, setHabilitado] = useState<boolean>(false)
     const listaNomes = usePegaNomes();
+    const trocaPagina = useNavigate();
 
     useEffect(()=>{        
        if(listaNomes.nomeJogador !== '' && listaNomes.nomePersonagem !== ""){
@@ -17,19 +19,15 @@ export default function FormularioNomes() {
        }
        console.log(listaNomes);
     },[listaNomes])
-    
-    
-    
 
-
-    const gravarNomes = (event: React.FormEvent<HTMLFormElement>) => {
+    const proximaPagina = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-
+        trocaPagina('/forja/antecedentes')
     }
-
-
+    
+    
     return (
-        <form className={styles.form} onSubmit={event => gravarNomes(event)}>
+        <form className={styles.form} onSubmit={event => proximaPagina(event)}>
             <fieldset className={styles.form__names}>
                 <legend>Names</legend>
                 <p className={styles.form__names__descricao}>Digite o nome do Jogador e o nome do seu Personagem para começar.</p>
