@@ -57,3 +57,10 @@
 > Com o comando `npm install --save normalize.css` e posteriormente sua importação no index do projeto, foi intalado o reset.css utilizado na aplicação, o Normalize.
 
 > Projeto cridao em React/TypeScript para ser um criador de personagem de RPG. Este projeto ira contar com formularios para a criação de um personagem e futuramente sera ligado a outro projeto que ira renderizar a ficha de RPG basedao no personagem criado aqui.
+
+---
+
+# Problemas e Soluções -> <div id='problemas__solucoes'></div>
+
+## Problema com atom `objeto`
+> Na criação do atom de um objeto para criar os nomes de jogador e personagem estava gerando um erro de typagem pois foi passado como tipo do atomo `object`. Para solucionar, eu criei uma ´interface´ para o atom, passando as chaves e seus tipos e depois passando como tipagem do atom a interface.S

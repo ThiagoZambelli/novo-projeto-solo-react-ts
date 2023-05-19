@@ -1,11 +1,11 @@
-import FormularioCriacao from 'components/FormularioCriacao';
 import React from 'react';
 import styles from './PaginaForja.module.scss';
+import FormularioNomes from 'components/FormularioNomes';
 
 function PaginaForja() {
   return (
     <section className={styles.forja}>
-      <FormularioCriacao />
+      <FormularioNomes />
     </section>
   )
 }

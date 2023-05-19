@@ -17,3 +17,10 @@
         border-bottom: 1px solid $color-5-hex;
     }
 }
+@media screen and (max-width: 760px) {
+    .footer{
+        img{
+            max-width: 110px;
+        }
+    }
+}

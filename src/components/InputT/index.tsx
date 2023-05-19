@@ -1,16 +1,25 @@
 import { useState } from 'react';
 import styles from './InputT.module.scss';
+import useGravaNomes from 'state/hooks/useGravaNomes';
 
 interface IInputT {
     type: string,
     label: string,
-    required?: boolean
-
+    required?: boolean,
+    campo: string 
 }
 
-export default function InputT({ type, label, required = false }: IInputT) {
+export default function InputT({ campo, type, label, required = false }: IInputT) {
 
     const [value, setValue] = useState('')
+    const setNomes = useGravaNomes()
+    
+
+    const mudandoValor = (evento : React.ChangeEvent<HTMLInputElement>) => {
+        let valor = evento.target.value;
+        setValue(valor);
+        setNomes(campo, valor);                   
+    }
 
     return (
         <div className={styles.input_grup}>
@@ -18,7 +27,7 @@ export default function InputT({ type, label, required = false }: IInputT) {
                 required={required}
                 type={type}
                 value={value}
-                onChange={event => setValue(event.target.value)}
+                onChange={evento => mudandoValor(evento)}
             />
             <label
                 className={value ? styles.preenchido : ''}
