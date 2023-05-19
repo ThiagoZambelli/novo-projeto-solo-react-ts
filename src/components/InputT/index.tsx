@@ -18,8 +18,13 @@ export default function InputT({ campo, type, label, required = false }: IInputT
     const mudandoValor = (evento : React.ChangeEvent<HTMLInputElement>) => {
         let valor = evento.target.value;
         setValue(valor);
-        setNomes(campo, valor);                   
+        setNomes(campo, valor);              
     }
+    const prevenirEnter = (event: React.KeyboardEvent<HTMLInputElement>) => {
+        if (event.key === 'Enter') {
+          event.preventDefault();
+        }
+      };
 
     return (
         <div className={styles.input_grup}>
@@ -28,6 +33,7 @@ export default function InputT({ campo, type, label, required = false }: IInputT
                 type={type}
                 value={value}
                 onChange={evento => mudandoValor(evento)}
+                onKeyDown={prevenirEnter}              
             />
             <label
                 className={value ? styles.preenchido : ''}

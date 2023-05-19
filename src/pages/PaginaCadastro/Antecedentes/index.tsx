@@ -4,7 +4,7 @@ import PaginaCadastro from '..'
 function Antecedentes() {
   return (
     <PaginaCadastro>
-        <div>Antecedentes</div>
+        <div>...</div>
     </PaginaCadastro>
   )
 }

@@ -12,7 +12,7 @@
     &__jogador{       
         color: $color-6-hex;
         background-color: $color-1-hex;
-        padding: .3em 1em;
+        padding: .3em 0 .3em .5em;
         border-radius: .5em 0 0 .5em;
         border: 2px solid $color-1-hex;
         box-shadow: 0 0 6px $color-3-hex;
@@ -20,9 +20,7 @@
     &__personagem{
         padding: .3em 1em;
         color: $color-1-hex;
-        border: 2px solid $color-1-hex;
-        box-shadow: 0 0 12px $color-3-hex;
-        text-decoration: underline;
+        border-bottom: 4px solid $color-1-hex;                
         font-family: $fonte-destaque;
     }
 }
