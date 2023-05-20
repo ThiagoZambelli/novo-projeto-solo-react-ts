@@ -1,6 +1,7 @@
 import styles from './NavLink.module.scss';
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom';
+import useResetValue from 'state/hooks/useResetValue';
 
 interface INavLink {
     to: string,
@@ -11,10 +12,11 @@ interface INavLink {
 
 function NavLink({ to, name }: INavLink) {
     const atual = useLocation();
+    const reset = useResetValue();
     
 
     return (
-        <Link className={`${styles.link} ${atual.pathname === to ? styles.linkAtivo : ''}`} to={to}>
+        <Link onClick={reset} className={`${styles.link} ${atual.pathname === to ? styles.linkAtivo : ''}`} to={to}>
             {name}
         </Link>
     )

@@ -1,19 +1,13 @@
+import INomes from 'Interfaces/INomes';
+import IPaginaAtual from 'Interfaces/IPaginaAtual';
 import IRace from 'Interfaces/IRaces';
 import { atom } from 'recoil';
 
-interface INomes {
-    nomeJogador: string,
-    nomePersonagem: string
-}
 
-export const paginaAtual = atom<object>({
+
+export const paginaAtual = atom<IPaginaAtual>({
     key: 'paginaAtual',
-    default: {
-        ancestralidade: false,
-        antecedentes: false,
-        classes: false,
-        magias: false
-    },
+    default: { paginaAtual: '' }
 })
 
 export const nomes = atom<INomes>({
@@ -27,7 +21,7 @@ export const nomes = atom<INomes>({
 export const race = atom<IRace>({
     key: 'race',
     default: {
-        name:'',
-        description:''
+        name: '',
+        description: ''
     }
 })

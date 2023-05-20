@@ -2,6 +2,7 @@ import { useState } from 'react'
 import races from 'assets/db/races.json';
 import useGravaRace from 'state/hooks/useGravaRace';
 import styles from './SelectRaces.module.scss';
+import usePegaRace from 'state/hooks/usePegaRace';
 
 function SelectRaces() {
     const gravaRace = useGravaRace();
@@ -10,6 +11,8 @@ function SelectRaces() {
         setRaceAtual(evento.target.value)
         gravaRace(evento.target.value)
     }
+
+    const race = usePegaRace();
 
     
     return (
@@ -21,7 +24,7 @@ function SelectRaces() {
             <div className={styles.selectRaces__escolhas}>
                 <p>Escolha uma das opções:</p>
                 <select value={raceAtual} onChange={mudaValor}>
-                    <option> ---- </option>
+                    {race.name === '' ? <option> ---- </option> : ''}
                     {races.map(race => (<option value={race.name} key={race.name}>{race.name}</option>))}
                 </select>
             </div>

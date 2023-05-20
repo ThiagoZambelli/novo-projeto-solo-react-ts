@@ -3,10 +3,13 @@ import usePegaRace from 'state/hooks/usePegaRace'
 import styles from './DescricaoRace.module.scss';
 
 function DescricaoRace() {
-const descricao = usePegaRace();
+const race = usePegaRace();
 
   return (
-    <div className={styles.descricao}>{descricao.description}</div>
+    <section className={styles.descricao}>
+      <h2>{race.name}</h2>
+      <div >{race.description}</div>
+    </section>
   )
 }
 

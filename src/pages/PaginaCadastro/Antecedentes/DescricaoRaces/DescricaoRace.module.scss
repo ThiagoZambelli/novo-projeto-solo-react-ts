@@ -8,6 +8,12 @@
     color: $color-1-hex;
     border-left: 2px dashed $color-2-hex;
     padding-left: 2rem;
+    h2{
+        text-align: center;
+        font-size: 2.5rem;
+        padding: 1em;
+        color: $color-3-hex;
+    }
 }
 
 @media screen and (max-width:760px) {
