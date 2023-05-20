@@ -16,8 +16,7 @@ export default function FormularioNomes() {
        }
        if(listaNomes.nomeJogador === '' || listaNomes.nomePersonagem === ""){
         setHabilitado(false);
-       }
-       console.log(listaNomes);
+       }       
     },[listaNomes])
 
     const proximaPagina = (event: React.FormEvent<HTMLFormElement>) => {

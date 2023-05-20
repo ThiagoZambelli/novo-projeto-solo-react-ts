@@ -1,3 +1,4 @@
+import IRace from 'Interfaces/IRaces';
 import { atom } from 'recoil';
 
 interface INomes {
@@ -21,4 +22,12 @@ export const nomes = atom<INomes>({
         nomeJogador: '',
         nomePersonagem: ''
     },
+})
+
+export const race = atom<IRace>({
+    key: 'race',
+    default: {
+        name:'',
+        description:''
+    }
 })
