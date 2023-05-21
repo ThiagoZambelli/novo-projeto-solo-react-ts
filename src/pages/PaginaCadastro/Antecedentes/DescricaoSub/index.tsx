@@ -4,8 +4,7 @@ import styles from './DescricaoSub.module.scss';
 import {GiDramaMasks} from 'react-icons/gi'
 
 function DescricaoSub() {
-    const subRace = usePegaSubRaca();
-    console.log(subRace)
+    const subRace = usePegaSubRaca();    
 
     return (
         subRace.name !== ''

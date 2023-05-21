@@ -1,3 +1,3 @@
-export default interface IPaginaAtual{
+export default interface IPaginaAtual {
     paginaAtual: '' |'nomes' | 'ancestralidade'
 }
