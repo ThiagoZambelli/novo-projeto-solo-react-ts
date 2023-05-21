@@ -9,7 +9,7 @@ function DescricaoRace() {
   return (
     <div className={styles.descricao}>
       <section className={styles.descricao__race}>
-        <h2>{race.name}</h2>
+        {race.name !== '' ? <h2>{race.name}</h2> : ''}
         <div >{race.description}</div>
       </section>
       <DescricaoSub />
