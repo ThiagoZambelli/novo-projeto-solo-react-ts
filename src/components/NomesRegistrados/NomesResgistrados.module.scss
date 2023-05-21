@@ -24,3 +24,21 @@
         font-family: $fonte-destaque;
     }
 }
+@media screen and (max-width: 760px) {
+    .nomes{
+        font-size: 1.5rem;
+    }
+    
+}
+@media screen and (max-width: 460px) {
+    .nomes{
+        font-size: 1.2rem;
+    }
+    
+}
+@media screen and (max-width: 390px) {
+    .nomes{
+        font-size: 1rem;
+    }
+    
+}

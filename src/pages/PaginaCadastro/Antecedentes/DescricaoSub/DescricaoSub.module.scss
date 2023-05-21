@@ -1,0 +1,32 @@
+@import 'styles/_variaveis.module.scss';
+
+.descricao {
+
+    text-align: justify;
+    font-size: 1.3rem;
+    line-height: 1.3em;
+    color: $color-1-hex;
+    border-left: 2px dashed $color-2-hex;
+    padding-left: 2rem;
+
+    h3 {
+        text-align: center;
+        font-size: 1.8rem;
+        color: $color-6-hex;
+        margin: 1em;
+        padding: .3em .5em;
+        color: $color-6-hex;
+        background-color: $color-1-hex;
+        border-radius: 1rem;
+    }
+
+}
+
+@media screen and (max-width:760px) {
+    .descricao {
+        width: 90%;
+        border-left: none;
+        padding-left: 0;
+        margin: 0;
+    }
+}

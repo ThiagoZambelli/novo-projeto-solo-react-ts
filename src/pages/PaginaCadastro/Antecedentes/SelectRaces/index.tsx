@@ -3,18 +3,21 @@ import races from 'assets/db/races.json';
 import useGravaRace from 'state/hooks/useGravaRace';
 import styles from './SelectRaces.module.scss';
 import usePegaRace from 'state/hooks/usePegaRace';
+import SelectSub from '../SelectSub';
+
+
+
 
 function SelectRaces() {
-    const gravaRace = useGravaRace();
+    const gravaRace = useGravaRace(); 
+    const race = usePegaRace();
     const [raceAtual, setRaceAtual] = useState('')
+
     const mudaValor = (evento: React.ChangeEvent<HTMLSelectElement>) => {
         setRaceAtual(evento.target.value)
-        gravaRace(evento.target.value)
-    }
+        gravaRace(evento.target.value)               
+    }  
 
-    const race = usePegaRace();
-
-    
     return (
         <section className={styles.selectRaces}>
             <div className={styles.selectRaces__titulo}>
@@ -27,7 +30,8 @@ function SelectRaces() {
                     {race.name === '' ? <option> ---- </option> : ''}
                     {races.map(race => (<option value={race.name} key={race.name}>{race.name}</option>))}
                 </select>
-            </div>
+                <SelectSub />
+            </div>            
         </section>
     )
 }

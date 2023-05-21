@@ -1,21 +1,34 @@
 import { useSetRecoilState } from "recoil";
-import { race } from "state/atom";
+import { listaSubRace, race, subRace } from "state/atom";
 import listaRaces from 'assets/db/races.json';
 
-export default function useGravaRace() {
-    const gravaRace = useSetRecoilState(race);    
 
-    return (race: string) => {    
-        const descricao = {...listaRaces.filter(elemento =>{
-            return elemento.name === race;
-        })}
-        
+export default function useGravaRace() {
+    const gravaRace = useSetRecoilState(race);
+    const gravaListaSub = useSetRecoilState(listaSubRace);
+    const gravaSub = useSetRecoilState(subRace);
+
+    return (race: string) => {
+
+        const descricao = {
+            ...listaRaces.filter(elemento => {
+                return elemento.name === race;
+            })
+        }
+
+        if (descricao[0].subRace) {
+            gravaListaSub(descricao[0].subRace)
+        } else {
+            gravaListaSub([])
+            gravaSub({name:'', description:''})
+        }
+
         gravaRace(raceAntiga => ({
             ...raceAntiga,
-            name:race,
-            description: descricao[0].description
-        }))      
-        
+            name: race,
+            description: descricao[0].description,
+        }))
+
     }
 }
 

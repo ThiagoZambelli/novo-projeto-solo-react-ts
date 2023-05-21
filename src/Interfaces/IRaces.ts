@@ -1,5 +1,7 @@
-export default interface IRace {
+import ISubRace from "./ISubRace";
+
+export default interface IRaces {
     name: string,
-    description: string,
-    habilidades?:[]
+    description: string,    
+    subRace?: ISubRace;
 }

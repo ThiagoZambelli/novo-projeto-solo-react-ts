@@ -9,7 +9,7 @@ function NomesRegistrados() {
 
   return (
     <section className={styles.nomes}>
-        <h3 className={styles.nomes__jogador}>{nomes.nomeJogador} :</h3>
+        <h3 className={styles.nomes__jogador}>{nomes.nomeJogador} </h3>
         <h3 className={styles.nomes__personagem}>{nomes.nomePersonagem}</h3>
     </section>
   )
