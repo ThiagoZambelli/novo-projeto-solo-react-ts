@@ -1,9 +1,11 @@
 import { useSetRecoilState } from "recoil";
-import { nomes, race } from "state/atom";
+import { listaSubRace, nomes, race, subRace } from "state/atom";
 
 export default function useResetValue(){
     const apagarNomes = useSetRecoilState(nomes);
     const apagarRaca = useSetRecoilState(race);
+    const apagarSub = useSetRecoilState(subRace);
+    const apagarListaSub = useSetRecoilState(listaSubRace);
 
     return () => {
         apagarNomes((nomesAntigos) => ({
@@ -16,5 +18,11 @@ export default function useResetValue(){
             description:'',
             name: ''
         }))
+        apagarSub((subAntiga) => ({
+            ...subAntiga,
+            description:'',
+            name: ''
+        }))
+        apagarListaSub([])
     }
 }
