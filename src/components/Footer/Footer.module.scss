@@ -24,3 +24,9 @@
         }
     }
 }
+@media screen and (max-width: 500px) {
+    .footer{
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+}

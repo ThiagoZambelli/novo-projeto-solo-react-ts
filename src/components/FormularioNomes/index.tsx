@@ -3,6 +3,7 @@ import styles from './FormularioNomes.module.scss';
 import { useEffect, useState } from "react";
 import usePegaNomes from "state/hooks/usePegaNomes";
 import { useNavigate } from "react-router-dom";
+import {GiThorHammer} from 'react-icons/gi'
 
 
 export default function FormularioNomes() {
@@ -37,7 +38,7 @@ export default function FormularioNomes() {
                 <button
                     disabled={!habilitado}
                     className={`${styles.botao} ${habilitado ? styles.botao__habilitado : ''}`}
-                >Iniciar Criação</button>
+                >Iniciar Criação <GiThorHammer /></button>
             </fieldset>
         </form>
     )

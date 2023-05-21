@@ -44,6 +44,9 @@
     background-color: transparent;
     border: 2px solid $color-2-hex;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
 
     &__habilitado {
         border: 2px solid $color-3-hex;
