@@ -1,0 +1,27 @@
+@import 'styles/_variaveis.module.scss';
+
+.botao {
+    font-size: 1.2rem;
+    padding: .5em 1em;
+    border-radius: 1em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    column-gap: 1em;
+    border: 2px solid $color-3-hex;
+    background-color: $color-1-hex;
+    color: $color-6-hex;
+    box-shadow: 0 0 6px $color-1-hex;
+    transition: .5s;
+    margin: 0 auto;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        border: .5px solid $color-3-hex;
+        color: $color-5-hex;
+    }
+
+}

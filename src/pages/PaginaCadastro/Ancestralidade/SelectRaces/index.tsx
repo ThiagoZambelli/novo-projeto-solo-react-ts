@@ -22,7 +22,7 @@ function SelectRaces() {
         <section className={styles.selectRaces}>
             <div className={styles.selectRaces__titulo}>
                 <h2>Ancestralidade</h2>
-                <p>Agora vamos para uma das partes mais importantes, sua Ancestralidade. Em um mundo de Alta-Fantasia o sangue que corre em suas veias diz muito sobre quem você é!</p>
+                <p>Agora vamos para uma das partes mais importantes, sua Ancestralidade. Em um mundo de Alta-Fantasia, o sangue que corre em suas veias diz muito sobre quem você é!</p>
             </div>
             <div className={styles.selectRaces__escolhas}>
                 <p>Escolha uma das opções:</p>

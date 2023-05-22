@@ -1,0 +1,58 @@
+@import 'styles/_variaveis.module.scss';
+
+.selectExperiencias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 40%;    
+    padding: 0 1rem 0 0;
+    color: $color-2-hex;
+
+    &__titulo {
+        h2 {
+            font-size: 2rem;
+            font-family: $fonte-destaque;
+            padding: .5em 0;
+            color: $color-5-hex;
+        }
+
+        p {
+            text-align: justify;
+            font-size: 1.1rem;
+            line-height: 1.3em;
+        }
+    }
+
+    &__escolhas {
+        margin: 3rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        p {
+            padding: .5em 0;
+        }
+
+        select {
+            text-align: center;
+            font-size: 1.5rem;
+            background-color: transparent;
+            padding: .3em .5em;
+            border-radius: 1em;
+            border: 2px solid $color-1-hex;
+            color: $color-5-hex;
+
+            option{
+                background-color: $color-6-hex;
+                color: $color-5-hex;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:760px) {
+    .selectExperiencias {
+        width: 90%;
+        border-right: none;
+    }
+}

@@ -1,5 +1,5 @@
 import { useSetRecoilState } from "recoil";
-import { listaSubRace, nomes, paginasCadastro, race, subRace } from "state/atom";
+import { experiencia, listaSubRace, nomes, paginasCadastro, race, subRace } from "state/atom";
 
 export default function useResetValue() {
     const apagarNomes = useSetRecoilState(nomes);
@@ -7,6 +7,7 @@ export default function useResetValue() {
     const apagarSub = useSetRecoilState(subRace);
     const apagarListaSub = useSetRecoilState(listaSubRace);
     const apagaPagina = useSetRecoilState(paginasCadastro);
+    const apagaExperiencia = useSetRecoilState(experiencia);
 
     return () => {
         apagarNomes((nomesAntigos) => ({
@@ -30,6 +31,11 @@ export default function useResetValue() {
             ...antiga,
             ancestralidade: false,
             experiencias: false
+        }))
+        apagaExperiencia(antiga => ({
+            ...antiga,
+            title: '',
+            description: ''
         }))
     }
 }

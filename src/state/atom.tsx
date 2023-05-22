@@ -1,3 +1,4 @@
+import IExperiencia from 'Interfaces/IExperiencia';
 import INomes from 'Interfaces/INomes';
 import IPaginasCadastro from 'Interfaces/IPaginasCadastro';
 import IRaces from 'Interfaces/IRaces';
@@ -11,6 +12,14 @@ export const paginasCadastro = atom<IPaginasCadastro>({
     default: {
         ancestralidade: false,
         experiencias: false
+    }
+})
+
+export const experiencia = atom<IExperiencia>({
+    key: 'experiencia',
+    default: {
+        title: '',
+        description: ''
     }
 })
 

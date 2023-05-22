@@ -1,10 +1,18 @@
 import React from 'react'
-import PaginaCadastro from '..'
+import PaginaCadastro from '..';
+import styles from './Experiencias.module.scss';
+import SelectExperiencias from './SelectExperiencias';
+import DescricaoExperiencias from './DescricaoExperiencias';
+import BotaoTrocaPagina from './BotaoTrocaPagina';
 
 function Experiencias() {
     return (
-        <PaginaCadastro>
-            <div>Experiencias</div>
+        <PaginaCadastro>            
+            <section className={styles.experiencias}>
+                <SelectExperiencias />
+                <DescricaoExperiencias />                
+            </section>
+            <BotaoTrocaPagina />
         </PaginaCadastro>
     )
 }
