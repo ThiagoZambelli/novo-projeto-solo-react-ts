@@ -1,6 +1,6 @@
 <div align="center">
 
-![Alt text](src/assets/logoLithtleZ.svg)
+![Alt text](src/assets/logoLithtleZ.svg) 
 
 &nbsp;
 
