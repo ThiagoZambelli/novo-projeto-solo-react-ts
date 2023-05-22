@@ -1,4 +1,5 @@
 import Ancestralidade from 'pages/PaginaCadastro/Ancestralidade'
+import Experiencias from 'pages/PaginaCadastro/Experiencias';
 import PaginaComum from 'pages/PaginaComum';
 import PaginaForja from 'pages/PaginaForja';
 import PaginaInicial from 'pages/PaginaInicial';
@@ -11,7 +12,8 @@ export default function Rotas() {
             <Route path='/' element={<PaginaComum />}>
                 <Route index element={<PaginaInicial />} />
                 <Route path='forja' element={<PaginaForja />} />
-                <Route path='forja/ancestralidade' element={<Ancestralidade />} />                
+                <Route path='forja/ancestralidade' element={<Ancestralidade />} />               
+                <Route path='forja/experiencias' element={<Experiencias />} />               
             </Route>
         </Routes>
     )

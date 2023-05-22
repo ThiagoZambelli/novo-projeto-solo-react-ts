@@ -4,4 +4,12 @@
     padding: 4rem 1rem;
     min-height: 50vh;
     background-color: $color-6-hex;
+
+    &__header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
 }

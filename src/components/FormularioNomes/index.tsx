@@ -3,7 +3,7 @@ import styles from './FormularioNomes.module.scss';
 import { useEffect, useState } from "react";
 import usePegaNomes from "state/hooks/usePegaNomes";
 import { useNavigate } from "react-router-dom";
-import {GiThorHammer} from 'react-icons/gi'
+import { GiAnvilImpact } from 'react-icons/gi'
 import useGravaPaginasCadastro from "state/hooks/useGravaPaginasCadastro";
 
 
@@ -13,22 +13,22 @@ export default function FormularioNomes() {
     const trocaPagina = useNavigate();
     const gravaPagina = useGravaPaginasCadastro();
 
-    useEffect(()=>{        
-       if(listaNomes.nomeJogador !== '' && listaNomes.nomePersonagem !== ""){
-        setHabilitado(true);
-       }
-       if(listaNomes.nomeJogador === '' || listaNomes.nomePersonagem === ""){
-        setHabilitado(false);
-       }       
-    },[listaNomes])
+    useEffect(() => {
+        if (listaNomes.nomeJogador !== '' && listaNomes.nomePersonagem !== "") {
+            setHabilitado(true);
+        }
+        if (listaNomes.nomeJogador === '' || listaNomes.nomePersonagem === "") {
+            setHabilitado(false);
+        }
+    }, [listaNomes])
 
     const proximaPagina = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         gravaPagina('ancestralidade')
         trocaPagina('/forja/ancestralidade')
     }
-    
-    
+
+
     return (
         <form className={styles.form} onSubmit={event => proximaPagina(event)}>
             <fieldset className={styles.form__names}>
@@ -41,7 +41,7 @@ export default function FormularioNomes() {
                 <button
                     disabled={!habilitado}
                     className={`${styles.botao} ${habilitado ? styles.botao__habilitado : ''}`}
-                >Iniciar Criação <GiThorHammer /></button>
+                >Iniciar Criação <GiAnvilImpact /></button>
             </fieldset>
         </form>
     )

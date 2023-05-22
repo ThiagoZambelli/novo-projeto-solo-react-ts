@@ -10,7 +10,7 @@ export const paginasCadastro = atom<IPaginasCadastro>({
     key: 'paginasCadastro',
     default: {
         ancestralidade: false,
-        bg: false
+        experiencias: false
     }
 })
 

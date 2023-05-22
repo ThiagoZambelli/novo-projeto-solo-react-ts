@@ -24,7 +24,7 @@ export default function useGravaRace() {
         }
 
         gravaRace(raceAntiga => ({
-            ...raceAntiga,
+            ...raceAntiga,            
             name: race,
             description: descricao[0].description,
         }))

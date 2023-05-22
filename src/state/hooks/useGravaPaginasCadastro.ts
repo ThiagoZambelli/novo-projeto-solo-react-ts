@@ -9,10 +9,10 @@ export default function useGravaPaginasCadastro() {
                 ...antiga,
                 ancestralidade: true
             }));
-        } else if (pagina === 'bg') {
+        } else if (pagina === 'experiencias') {
             setPaginas(antiga => ({
                 ...antiga,
-                bg: true
+                experiencias: true
             }));
         }
 

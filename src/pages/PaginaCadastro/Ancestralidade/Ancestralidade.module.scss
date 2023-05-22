@@ -1,13 +1,18 @@
-.ancestralidade{
+@import 'styles/_variaveis.module.scss';
+
+.ancestralidade {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 4rem 0;
 }
+
+
+
 @media screen and (max-width:760px) {
-    .ancestralidade{
+    .ancestralidade {
         flex-direction: column;
         row-gap: 4rem;
     }
-    
+
 }

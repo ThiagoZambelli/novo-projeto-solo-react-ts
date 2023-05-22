@@ -25,10 +25,11 @@ export default function useResetValue() {
             name: ''
         }))
         apagarListaSub([])
+
         apagaPagina(antiga => ({
             ...antiga,
             ancestralidade: false,
-            bg: false
+            experiencias: false
         }))
     }
 }
