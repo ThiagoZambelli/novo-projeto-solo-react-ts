@@ -4,12 +4,14 @@ import { useEffect, useState } from "react";
 import usePegaNomes from "state/hooks/usePegaNomes";
 import { useNavigate } from "react-router-dom";
 import {GiThorHammer} from 'react-icons/gi'
+import useGravaPaginasCadastro from "state/hooks/useGravaPaginasCadastro";
 
 
 export default function FormularioNomes() {
     const [habilitado, setHabilitado] = useState<boolean>(false)
     const listaNomes = usePegaNomes();
     const trocaPagina = useNavigate();
+    const gravaPagina = useGravaPaginasCadastro();
 
     useEffect(()=>{        
        if(listaNomes.nomeJogador !== '' && listaNomes.nomePersonagem !== ""){
@@ -22,7 +24,8 @@ export default function FormularioNomes() {
 
     const proximaPagina = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        trocaPagina('/forja/antecedentes')
+        gravaPagina('ancestralidade')
+        trocaPagina('/forja/ancestralidade')
     }
     
     

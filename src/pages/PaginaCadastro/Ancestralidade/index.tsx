@@ -2,16 +2,16 @@ import React from 'react'
 import PaginaCadastro from '..'
 import SelectRaces from './SelectRaces'
 import DescricaoRace from './DescricaoRaces'
-import styles from './Antecedentes.module.scss';
-import useProximaPagina from 'state/hooks/useProximaPagina';
+import styles from './Ancestralidade.module.scss';
 
 
-function Antecedentes() {
-  const verificaPagina = useProximaPagina()
-  verificaPagina();
+
+function Ancestralidade() {
+  
+  
   return (
     <PaginaCadastro>
-        <section className={styles.antecedentes}>
+        <section className={styles.ancestralidade}>
           <SelectRaces />
           <DescricaoRace />
         </section>        
@@ -19,4 +19,4 @@ function Antecedentes() {
   )
 }
 
-export default Antecedentes
+export default Ancestralidade
