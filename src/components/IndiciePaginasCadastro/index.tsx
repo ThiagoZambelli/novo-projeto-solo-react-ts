@@ -16,6 +16,10 @@ function IndiciePaginasCadastro() {
       <p className={`${paginasJaAcessadas.experiencias ? styles.indice__jaAcessados : ""}`} >Experiências</p>
       <AiOutlineLine className={`${paginasJaAcessadas.experiencias ? styles.indice__jaAcessados : ""}`}/>
       <BsFillRecordCircleFill className={`${paginasJaAcessadas.experiencias ? styles.indice__jaAcessados : ""}`}/>
+      <AiOutlineLine className={`${paginasJaAcessadas.profissao ? styles.indice__jaAcessados : ""}`} />
+      <p className={`${paginasJaAcessadas.profissao  ? styles.indice__jaAcessados : ""}`} >Profissao</p>
+      <AiOutlineLine className={`${paginasJaAcessadas.profissao  ? styles.indice__jaAcessados : ""}`}/>
+      <BsFillRecordCircleFill className={`${paginasJaAcessadas.profissao? styles.indice__jaAcessados : ""}`}/>
     </div>
   )
 }

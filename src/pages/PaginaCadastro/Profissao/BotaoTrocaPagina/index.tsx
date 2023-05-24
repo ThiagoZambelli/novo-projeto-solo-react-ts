@@ -13,7 +13,7 @@ function BotaoTrocaPagina() {
 
     function mudaDepagina() {
         gravaPagina('profissao')
-        trocaPagina('/forja/profissao')
+        trocaPagina('/forja/final')
     }
 
     return (
@@ -22,7 +22,7 @@ function BotaoTrocaPagina() {
                 ? <button
                     onClick={mudaDepagina}
                     className={styles.botao}
-                >Profissão <GiDropWeapon /></button>
+                >Final <GiDropWeapon /></button>
                 : ''}
         </div>
     )

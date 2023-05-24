@@ -14,7 +14,11 @@ export default function useGravaPaginasCadastro() {
                 ...antiga,
                 experiencias: true
             }));
+        } else if (pagina === 'profissao') {
+            setPaginas(antiga => ({
+                ...antiga,
+                profissao: true
+            }));
         }
-
     }
 }

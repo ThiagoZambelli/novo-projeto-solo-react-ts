@@ -1,5 +1,5 @@
 import { useSetRecoilState } from "recoil";
-import { experiencia, habilidadesRaca, habilidadesSubRaca, listaSubRace, nomes, paginasCadastro, race, subRace } from "state/atom";
+import { experiencia, habilidadesProfissao, habilidadesRaca, habilidadesSubRaca, listaSubRace, nomes, paginasCadastro, profissao, race, subRace } from "state/atom";
 
 export default function useResetValue() {
     const apagarNomes = useSetRecoilState(nomes);
@@ -10,6 +10,8 @@ export default function useResetValue() {
     const apagaExperiencia = useSetRecoilState(experiencia);
     const apagaHabilidadesRace = useSetRecoilState(habilidadesRaca);
     const apagaHabilidadesSubRace = useSetRecoilState(habilidadesSubRaca);
+    const apagaHabilidadesProfissao = useSetRecoilState(habilidadesProfissao);
+    const apagaProfissao = useSetRecoilState(profissao);
 
     return () => {
         apagarNomes((nomesAntigos) => ({
@@ -41,5 +43,16 @@ export default function useResetValue() {
         }))
         apagaHabilidadesRace(() => ([{ name: '', description: '' }]))
         apagaHabilidadesSubRace(() => ([{ name: '', description: '' }]))
+        apagaHabilidadesProfissao(() => ([{ name: '', description: '' }]))
+        apagaProfissao(() => ({
+            name: '',
+            description:'',
+            hitDice: 0,
+            proefArmor: '',
+            proefWeapon: '',
+            savingThrow: [''],
+            listaSkills: '',
+
+        }))
     }
 }

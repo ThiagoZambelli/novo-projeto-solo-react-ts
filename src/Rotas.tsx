@@ -1,11 +1,13 @@
 import Ancestralidade from 'pages/PaginaCadastro/Ancestralidade'
 import Experiencias from 'pages/PaginaCadastro/Experiencias';
+import Profissao from 'pages/PaginaCadastro/Profissao';
 import PaginaComum from 'pages/PaginaComum';
 import PaginaForja from 'pages/PaginaForja';
 import PaginaInicial from 'pages/PaginaInicial';
 import { Routes, Route } from 'react-router-dom';
 
-export default function Rotas() {    
+
+export default function Rotas() {   
     
     return (
         <Routes>
@@ -14,6 +16,7 @@ export default function Rotas() {
                 <Route path='forja' element={<PaginaForja />} />
                 <Route path='forja/ancestralidade' element={<Ancestralidade />} />               
                 <Route path='forja/experiencias' element={<Experiencias />} />               
+                <Route path='forja/profissao' element={<Profissao />} />               
             </Route>
         </Routes>
     )

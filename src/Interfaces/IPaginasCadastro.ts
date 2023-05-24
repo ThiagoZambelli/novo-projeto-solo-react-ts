@@ -1,4 +1,5 @@
 export default interface IPaginasCadastro {
     ancestralidade: boolean,
-    experiencias: boolean
+    experiencias: boolean,
+    profissao: boolean
 }
