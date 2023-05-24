@@ -1,22 +1,28 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import races from 'assets/db/races.json';
 import useGravaRace from 'state/hooks/useGravaRace';
 import styles from './SelectRaces.module.scss';
 import usePegaRace from 'state/hooks/usePegaRace';
 import SelectSub from '../SelectSub';
-
-
-
+import { useSetRecoilState } from 'recoil';
+import { subRace } from 'state/atom';
 
 function SelectRaces() {
-    const gravaRace = useGravaRace(); 
+    const gravaRace = useGravaRace();
     const race = usePegaRace();
-    const [raceAtual, setRaceAtual] = useState('')
+    const resetaSub = useSetRecoilState(subRace);
+    const [raceAtual, setRaceAtual] = useState('')    
+
 
     const mudaValor = (evento: React.ChangeEvent<HTMLSelectElement>) => {
-        setRaceAtual(evento.target.value)
-        gravaRace(evento.target.value)               
-    }  
+        setRaceAtual(evento.target.value);
+        gravaRace(evento.target.value);
+        resetaSub(() => ({
+            name: '',
+            description: ''
+        }))
+    }
+    
 
     return (
         <section className={styles.selectRaces}>
@@ -31,7 +37,7 @@ function SelectRaces() {
                     {races.map(race => (<option value={race.name} key={race.name}>{race.name}</option>))}
                 </select>
                 <SelectSub />
-            </div>            
+            </div>
         </section>
     )
 }

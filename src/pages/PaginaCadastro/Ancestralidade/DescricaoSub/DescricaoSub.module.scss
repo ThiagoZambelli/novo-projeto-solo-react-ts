@@ -5,8 +5,7 @@
     text-align: justify;
     font-size: 1.3rem;
     line-height: 1.3em;
-    color: $color-1-hex;
-    border-left: 2px dashed $color-2-hex;
+    color: $color-1-hex;    
     padding-left: 2rem;
 
     h3 {
@@ -24,8 +23,7 @@
 
 @media screen and (max-width:760px) {
     .descricao {
-        width: 90%;
-        border-left: none;
+        width: 90%;        
         padding-left: 0;
         margin: 0;
     }
