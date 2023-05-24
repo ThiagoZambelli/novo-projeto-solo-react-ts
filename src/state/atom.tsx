@@ -16,6 +16,15 @@ export const habilidadesRaca = atom<IHabilidades[]>({
         }
     ]
 })
+export const habilidadesSubRaca = atom<IHabilidades[]>({
+    key: 'habilidadesSubRaca',
+    default: [
+        {
+            name: '',
+            description: ''
+        }
+    ]
+})
 
 export const paginasCadastro = atom<IPaginasCadastro>({
     key: 'paginasCadastro',

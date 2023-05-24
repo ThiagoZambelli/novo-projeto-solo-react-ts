@@ -10,7 +10,7 @@ export default function useGravaRace() {
     const gravaListaSub = useSetRecoilState(listaSubRace);
     const gravaSub = useSetRecoilState(subRace);
     const gravaHabilidadesRace = useGravaHabilidadesRaca();
-         
+
 
     return (race: string) => {
 
@@ -26,14 +26,15 @@ export default function useGravaRace() {
             gravaListaSub([])
             gravaSub({ name: '', description: '' })
         }
+        
         gravaHabilidadesRace([...descricao[0].habilidades])
 
         gravaRace(raceAntiga => ({
             ...raceAntiga,
             name: race,
             description: descricao[0].description,
-        }))               
-        
+        }))
+
     }
 }
 

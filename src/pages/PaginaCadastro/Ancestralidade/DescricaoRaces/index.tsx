@@ -19,7 +19,10 @@ function DescricaoRace() {
         <div >{race.description}</div>
       </section>
       <DescricaoSub />
-      <DescricaoHabilidades lista={habilidadesRace} />
+      <section className={styles.descricao__habilidadesRace}>
+      {race.name !== '' ? <h2>Habilidades de - {race.name}</h2> : ''}
+        <DescricaoHabilidades lista={habilidadesRace} />
+      </section>
     </div>
   )
 }

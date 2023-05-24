@@ -2,15 +2,15 @@
 
 .habilidades {
     display: flex;
-    flex-direction: column;
-    margin: 2rem ;
+    flex-direction: column;    
     padding: 2rem 1rem;
     background-color: $criador-de-personagem-5-rgba;
     border-radius: 1rem;
     border-left: 2px dashed black;
     border-bottom: 2px dashed black;
     box-shadow: 0 0 9px $color-2-hex;
-    
+    width: 90%;
+
 
     &__habilidade {
         padding: 1rem 0;
@@ -24,11 +24,19 @@
             font-family: $fonte-destaque;
             color: $color-3-hex;
         }
-        P{
+
+        P {
             text-align: justify;
             line-height: 1.3em;
             padding: 1em 0;
             color: $color-4-hex;
         }
     }
+}
+
+@media screen and (max-width: 760px) {
+    .habilidades {
+        width: 100%;
+    }
+
 }
