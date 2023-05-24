@@ -11,7 +11,7 @@ interface Props {
 function DescricaoHabilidades({ lista }: Props) {
 
     return (
-        lista.length > 1
+        lista[0].name !== ''
             ?
             <section className={styles.habilidades}>
                 {lista.map(e => (

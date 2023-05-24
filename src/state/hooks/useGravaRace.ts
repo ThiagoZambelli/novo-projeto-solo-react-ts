@@ -1,7 +1,8 @@
 import { useSetRecoilState } from "recoil";
-import { listaSubRace, race, subRace } from "state/atom";
+import { habilidadesSubRaca, listaSubRace, race, subRace } from "state/atom";
 import listaRaces from 'assets/db/races.json';
 import useGravaHabilidadesRaca from "./useGravaHabilidadesRaca";
+import useGravaHabilidadesSubRaca from "./useGravaHabilidadeSubRaca";
 
 
 
@@ -10,6 +11,7 @@ export default function useGravaRace() {
     const gravaListaSub = useSetRecoilState(listaSubRace);
     const gravaSub = useSetRecoilState(subRace);
     const gravaHabilidadesRace = useGravaHabilidadesRaca();
+    const resetHabilidadesSub = useSetRecoilState(habilidadesSubRaca)
 
 
     return (race: string) => {
@@ -28,6 +30,7 @@ export default function useGravaRace() {
         }
         
         gravaHabilidadesRace([...descricao[0].habilidades])
+        resetHabilidadesSub(() => ([{ name: '', description: '' }]))
 
         gravaRace(raceAntiga => ({
             ...raceAntiga,

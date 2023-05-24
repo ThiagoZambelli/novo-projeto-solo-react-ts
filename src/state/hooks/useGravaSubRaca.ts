@@ -16,13 +16,8 @@ export default function useGravaSubRaca() {
             ...listaSub.filter(element => {
                 return element.name === name;
             })
-        }
-
-        console.log(subParaGravar[0]['habilidades']);
-
-        
-
-        
+        }        
+        gravaHabilidadesSubRace(subParaGravar[0].habilidades || [{name:'', description:''}])        
 
         gravaSub(() => ({ ...subParaGravar[0]}))
     }
