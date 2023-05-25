@@ -10,7 +10,7 @@ function DescricaoSub() {
     return (
         subRace.name !== ''
             ? <section className={styles.descricao}>
-                <h3><GiDramaMasks />  {subRace.name}</h3>
+                <h3>{subRace.name} <GiDramaMasks /></h3>
                 <p>{subRace.description}</p>                
             </section>
             : <></>

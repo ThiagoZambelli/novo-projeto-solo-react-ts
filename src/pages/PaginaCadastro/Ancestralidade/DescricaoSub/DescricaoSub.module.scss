@@ -9,7 +9,10 @@
     padding-left: 2rem;
 
     h3 {
-        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1em;
         font-size: 1.8rem;
         color: $color-6-hex;
         margin: 1em;
