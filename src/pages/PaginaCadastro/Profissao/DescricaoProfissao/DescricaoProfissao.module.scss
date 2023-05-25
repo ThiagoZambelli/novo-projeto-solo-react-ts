@@ -5,14 +5,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 40%;
+    border-left: 2px dashed $color-2-hex;
+    width: 55%;
 
     &__profissao {
         text-align: justify;
         font-size: 1.3rem;
         line-height: 1.3em;
         color: $color-1-hex;
-        border-left: 2px dashed $color-2-hex;
         padding-left: 2rem;
 
         h2 {
@@ -25,18 +25,36 @@
             margin: 1em;
             padding: .3em .5em;
             color: $color-6-hex;
-            background-color:$color-3-hex;
+            background-color: $color-3-hex;
             border-radius: 1rem;
+        }
+    }
+
+    &__habilidadesProfissao {
+        margin: 2rem 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h2 {
+            text-align: center;
+            font-size: 1.3rem;
+            padding: .3em .5em;
+            margin: 2em 0;
+            color: $color-6-hex;
+            background-color: $color-5-hex;
+            border-radius: 1em;
         }
     }
 }
 
 @media screen and (max-width:760px) {
     .descricao {
-        width: 90%;
-
+        width: 100%;
+        border-left: none;
         &__profissao {
-            border-left: none;
             padding-left: 0;
             margin: 0;
         }

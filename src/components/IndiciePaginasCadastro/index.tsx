@@ -1,25 +1,17 @@
-import React from 'react'
 import usePegaPaginas from 'state/hooks/usePegaPaginas'
 import styles from './IndiciePaginasCadastro.module.scss';
-import { BsFillRecordCircleFill } from 'react-icons/bs'
-import { AiOutlineLine } from 'react-icons/ai';
+import PaginaIndicie from './PaginaIndice';
+
 
 function IndiciePaginasCadastro() {
   const paginasJaAcessadas = usePegaPaginas();
 
   return (
     <div className={styles.indice}>
-      <p className={`${paginasJaAcessadas.ancestralidade ? styles.indice__jaAcessados : ""}`} >Ancestralidade</p>
-      <AiOutlineLine className={`${paginasJaAcessadas.ancestralidade ? styles.indice__jaAcessados : ""}`} />
-      <BsFillRecordCircleFill className={`${paginasJaAcessadas.ancestralidade ? styles.indice__jaAcessados : ""}`} />
-      <AiOutlineLine className={`${paginasJaAcessadas.experiencias ? styles.indice__jaAcessados : ""}`} />
-      <p className={`${paginasJaAcessadas.experiencias ? styles.indice__jaAcessados : ""}`} >Experiências</p>
-      <AiOutlineLine className={`${paginasJaAcessadas.experiencias ? styles.indice__jaAcessados : ""}`}/>
-      <BsFillRecordCircleFill className={`${paginasJaAcessadas.experiencias ? styles.indice__jaAcessados : ""}`}/>
-      <AiOutlineLine className={`${paginasJaAcessadas.profissao ? styles.indice__jaAcessados : ""}`} />
-      <p className={`${paginasJaAcessadas.profissao  ? styles.indice__jaAcessados : ""}`} >Profissao</p>
-      <AiOutlineLine className={`${paginasJaAcessadas.profissao  ? styles.indice__jaAcessados : ""}`}/>
-      <BsFillRecordCircleFill className={`${paginasJaAcessadas.profissao? styles.indice__jaAcessados : ""}`}/>
+      <PaginaIndicie titulo='Ancestralidade' habilitado={paginasJaAcessadas.ancestralidade} />
+      <PaginaIndicie titulo='Experiencias' habilitado={paginasJaAcessadas.experiencias} />
+      <PaginaIndicie titulo='Profissao' habilitado={paginasJaAcessadas.profissao} />
+      <PaginaIndicie titulo='Final' habilitado={paginasJaAcessadas.final} />
     </div>
   )
 }

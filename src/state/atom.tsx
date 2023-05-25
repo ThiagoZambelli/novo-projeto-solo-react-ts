@@ -13,7 +13,7 @@ export const profissao = atom<IProfissao>({
     key: 'profissao',
     default: {
         name: '',
-        description:'',
+        description: '',
         hitDice: 0,
         proefArmor: '',
         proefWeapon: '',
@@ -57,7 +57,8 @@ export const paginasCadastro = atom<IPaginasCadastro>({
     default: {
         ancestralidade: false,
         experiencias: false,
-        profissao: false
+        profissao: false,
+        final: false
     }
 })
 

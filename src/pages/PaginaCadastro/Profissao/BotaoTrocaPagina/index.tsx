@@ -1,12 +1,12 @@
 import styles from './BotaoTrocaPagina.module.scss';
 import { useNavigate } from 'react-router-dom';
-import { GiDropWeapon } from 'react-icons/gi';
+import { GiBeamsAura } from 'react-icons/gi';
 import useGravaPaginasCadastro from 'state/hooks/useGravaPaginasCadastro';
-import usePegaExperiencia from 'state/hooks/usePegaExperiencia';
+import usePegaProfissao from 'state/hooks/usePegaProfissao';
 
 
 function BotaoTrocaPagina() {
-    const experiencias = usePegaExperiencia();
+    const profissao = usePegaProfissao();
 
     const trocaPagina = useNavigate();
     const gravaPagina = useGravaPaginasCadastro();
@@ -18,11 +18,11 @@ function BotaoTrocaPagina() {
 
     return (
         <div>
-            {experiencias.title !== ''
+            {profissao.name !== ''
                 ? <button
                     onClick={mudaDepagina}
                     className={styles.botao}
-                >Final <GiDropWeapon /></button>
+                >Final <GiBeamsAura /></button>
                 : ''}
         </div>
     )

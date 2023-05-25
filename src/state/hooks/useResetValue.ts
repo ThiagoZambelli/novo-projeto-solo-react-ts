@@ -34,7 +34,9 @@ export default function useResetValue() {
         apagaPagina(antiga => ({
             ...antiga,
             ancestralidade: false,
-            experiencias: false
+            experiencias: false,
+            profissao: false,
+            final: false
         }))
         apagaExperiencia(antiga => ({
             ...antiga,
@@ -46,7 +48,7 @@ export default function useResetValue() {
         apagaHabilidadesProfissao(() => ([{ name: '', description: '' }]))
         apagaProfissao(() => ({
             name: '',
-            description:'',
+            description: '',
             hitDice: 0,
             proefArmor: '',
             proefWeapon: '',

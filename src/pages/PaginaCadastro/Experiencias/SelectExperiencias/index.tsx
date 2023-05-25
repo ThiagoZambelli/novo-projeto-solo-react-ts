@@ -3,6 +3,7 @@ import listaExperiencias from 'assets/db/bg.json';
 import styles from './SelectExperiencias.module.scss';
 import usePegaExperiencia from 'state/hooks/usePegaExperiencia';
 import useGravaExperiencia from 'state/hooks/useGravaExperiencia';
+import {BsFillCaretRightFill} from 'react-icons/bs'
 
 function SelectExperiencias() {
 
@@ -19,7 +20,7 @@ function SelectExperiencias() {
         <section className={styles.selectExperiencias}>
             <div className={styles.selectExperiencias__titulo}>
                 <h2>Experiências</h2>
-                <p>Após saber de onde veio, vamos descobrir o que você fazia antes de virar um aventureiro. Um soldado renegado, um Acólito de um monastério descobrindo o mundo pela primeira vez, ou talvez um criminoso ?</p>
+                <p><BsFillCaretRightFill />   Após saber de onde veio, vamos descobrir o que você fazia antes de virar um aventureiro. Um soldado renegado, um Acólito de um monastério descobrindo o mundo pela primeira vez, ou talvez um criminoso ?</p>
             </div>
             <div className={styles.selectExperiencias__escolhas}>
                 <p>Escolha uma das opções:</p>

@@ -5,10 +5,8 @@
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    color: $criador-de-personagem-2-rgba;       
-    &__jaAcessados{
-        color: $color-2-hex;
-    }
+    color: $criador-de-personagem-2-rgba; 
+    
 }
 @media screen and (max-width: 1024px) {
     .indice{

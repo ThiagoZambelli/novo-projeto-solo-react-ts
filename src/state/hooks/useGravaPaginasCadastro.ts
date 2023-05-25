@@ -19,6 +19,11 @@ export default function useGravaPaginasCadastro() {
                 ...antiga,
                 profissao: true
             }));
+        }else if (pagina === 'final') {
+            setPaginas(antiga => ({
+                ...antiga,
+                final: true
+            }));
         }
     }
 }
