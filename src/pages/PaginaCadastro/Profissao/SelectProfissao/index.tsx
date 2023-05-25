@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import listaProfissoes from 'assets/db/classes.json';
+import listaProfissoes from 'assets/db/profissoes.json';
 import styles from './SelectProfissao.module.scss';
 import usePegaProfissao from 'state/hooks/usePegaProfissao';
 import useGravaProfissao from 'state/hooks/useGravaProfissao';

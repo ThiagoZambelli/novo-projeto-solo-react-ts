@@ -8,5 +8,5 @@ export default interface IProfissao {
     proefWeapon: string,
     savingThrow: string[],
     listaSkills: string,
-    habilidades?: IHabilidades[];
+    features?: IHabilidades[];
 }

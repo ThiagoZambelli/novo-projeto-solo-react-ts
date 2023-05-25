@@ -1,6 +1,6 @@
 import { useSetRecoilState } from "recoil";
 import { habilidadesProfissao, profissao } from "state/atom";
-import lista from "assets/db/classes.json";
+import lista from "assets/db/profissoes.json";
 
 export default function useGravaProfissao() {
     const gravaProfissao = useSetRecoilState(profissao);
@@ -12,7 +12,7 @@ export default function useGravaProfissao() {
             return e.name === profissao;
         })
 
-        gravaHabilidadesProfissao(paraGravar[0].habilidades);
+        gravaHabilidadesProfissao(paraGravar[0].features);
 
         gravaProfissao(() => ({
             name: paraGravar[0].name,
