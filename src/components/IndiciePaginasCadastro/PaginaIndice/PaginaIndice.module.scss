@@ -2,7 +2,8 @@
 
 .pagina{
     display: flex;
-    align-items: center;    
+    align-items: center;
+    cursor: pointer;   
 }
 .habilitado{
     color: $color-3-hex;

@@ -16,9 +16,9 @@ function AncestralidadeF({ personagem }: Props) {
                 {personagem.subRace.name !== '' ? <h3>{personagem.subRace.name}</h3> : ''}
             </div>
             <div className={styles.ancestralidade__habilidades}>
-                {personagem.habilidadesRace.map(e => (<Descricao habilidade={e} />))}
+                {personagem.habilidadesRace.map(e => (<Descricao key={e.name} habilidade={e} />))}
                 {personagem.habilidadesSubRace[0].name !== ''
-                    ? personagem.habilidadesSubRace.map(e => (<Descricao habilidade={e} />))
+                    ? personagem.habilidadesSubRace.map(e => (<Descricao key={e.name} habilidade={e} />))
                     : ''}
             </div>
         </div>
