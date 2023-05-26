@@ -1,0 +1,45 @@
+@import 'styles/_variaveis.module.scss';
+
+.ancestralidade{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3rem .5rem;
+    background-color: $color-bg-p-1;
+
+    &__titulo{
+        width: 35%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        h2{
+            font-size: 2rem;
+            font-family: $fonte-destaque;
+            padding: .3em 0;
+            margin: .5em 0;
+            text-decoration: underline;
+        }
+        h3{
+            font-size: 1.5rem;
+        }
+    }
+    &__habilidades{
+        width: 50%;
+    }
+}
+@media screen and (max-width: 760px) {
+    .ancestralidade{
+        flex-direction: column;
+        row-gap: 1rem;
+
+        &__titulo{
+            width: 100%;
+        }
+        &__habilidades{
+            width: 100%;
+            padding: 0 2rem;
+        }
+    }
+}

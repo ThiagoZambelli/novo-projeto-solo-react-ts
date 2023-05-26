@@ -1,0 +1,17 @@
+@import 'styles/_variaveis.module.scss';
+
+.descricao{
+    padding: .5rem 0;
+    h4{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        column-gap: 1em;
+        font-size: 1rem;
+        font-family: $fonte-destaque;
+        padding: .2em 1em;
+    }
+    p{
+        line-height: 1.5em;
+    }
+}

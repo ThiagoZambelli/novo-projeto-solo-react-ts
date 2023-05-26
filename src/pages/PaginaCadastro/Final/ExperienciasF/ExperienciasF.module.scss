@@ -1,0 +1,46 @@
+@import 'styles/_variaveis.module.scss';
+
+.experiencia{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 3rem 0;
+    background-color: $color-bg-p-2;
+
+    &__titulo{
+        width: 35%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        h2{
+            font-size: 2rem;
+            font-family: $fonte-destaque;
+            padding: .3em 0;
+            margin: .5em 0;
+            text-decoration: underline;
+        }       
+    }
+    &__descricao{
+        width: 50%;
+        font-size: 1.3rem;
+        line-height: 1.2em;
+    }
+
+}
+@media screen and (max-width: 760px) {
+    .experiencia{
+        flex-direction: column;
+        row-gap: 1rem;
+
+        &__titulo{
+            width: 100%;
+        }
+        &__descricao{
+            width: 100%;
+            padding: 0 2rem;
+            text-align: justify;
+        }
+    }
+}

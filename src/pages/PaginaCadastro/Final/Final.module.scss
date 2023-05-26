@@ -1,0 +1,73 @@
+@import 'styles/_variaveis.module.scss';
+
+.final {
+    padding: 5rem 0;
+    background-color: $color-6-hex;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: $color-6-hex;
+
+
+
+    &__card {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: 4rem 0;
+        border: 2px solid $color-5-hex;
+        border-radius: 1rem 1rem 0 0;
+        box-shadow: 0 0 12px black;
+
+        &__nomes {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            font-family: $fonte-destaque;
+            font-size: 2rem;
+            color: $color-6-hex;
+            background-color: $color-5-hex;
+            border: 3px solid $color-5-hex;
+            border-radius: 1rem 1rem 0 0;
+
+            &__container {
+                padding: 1rem 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                span {
+                    font-size: 1rem;
+                    padding: .5em 0;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .final {
+        &__card {         
+
+            &__nomes {
+                font-size: 1.4rem;
+
+                &__container {
+                    padding: 1rem 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    span {
+                        font-size: .8rem;
+                        padding: .5em 0;
+                    }
+                }
+            }
+
+        }
+    }
+
+}

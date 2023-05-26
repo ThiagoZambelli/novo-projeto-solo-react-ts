@@ -8,9 +8,7 @@ import DescricaoHabilidades from 'components/DescricaoHabilidade';
 
 function DescricaoProfissao() {
   const profissao = usePegaProfissao();
-  const listaHabilidades = usePegaHabilidadesProfissao();
-
-  console.log(listaHabilidades)
+  const listaHabilidades = usePegaHabilidadesProfissao();  
 
   return (
     <div className={styles.descricao}>
