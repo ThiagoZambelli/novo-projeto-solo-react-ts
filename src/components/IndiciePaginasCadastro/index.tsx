@@ -10,7 +10,7 @@ function IndiciePaginasCadastro() {
   return (
     <div className={styles.indice}>
       <PaginaIndicie onde='ancestralidade' titulo='Ancestralidade' habilitado={paginasJaAcessadas.ancestralidade} />
-      <PaginaIndicie onde='experiencia' titulo='Experiencias' habilitado={paginasJaAcessadas.experiencias} />
+      <PaginaIndicie onde='experiencias' titulo='Experiencias' habilitado={paginasJaAcessadas.experiencias} />
       <PaginaIndicie onde='profissao' titulo='Profissao' habilitado={paginasJaAcessadas.profissao} />
       <PaginaIndicie onde='final' titulo='Final' habilitado={paginasJaAcessadas.final} />
     </div>
