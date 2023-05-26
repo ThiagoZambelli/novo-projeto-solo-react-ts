@@ -1,8 +1,9 @@
 @import 'styles/_variaveis.module.scss';
 
-.descricao{
+.descricao {
     padding: .5rem 0;
-    h4{
+
+    h4 {
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -10,10 +11,31 @@
         font-size: 1rem;
         font-family: $fonte-destaque;
         padding: .2em 1.5em;
+
+        background-color: $color-bg-p-4-blur;
+        backdrop-filter: blur(10px);
+        /* Outras propriedades para criar o efeito de vidro */
+        opacity: 0.8;
+        border-radius: .5em;
     }
-    p{
+
+    p {
         line-height: 1.5em;
         padding: 1em 1.5em;
         text-align: justify;
+
+        opacity: 0;
+        animation: fadeIn 1s ease-in-out forwards;
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
     }
 }

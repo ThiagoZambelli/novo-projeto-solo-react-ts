@@ -8,7 +8,7 @@ function DescricaoExperiencias() {
   const experiencia = usePegaExperiencia();
 
   return (
-    <div className={styles.descricao}>
+    <div className={styles.descricao} key={experiencia.title}>
       <section className={styles.descricao__race}>
         {experiencia.title !== '' ? <h2>{experiencia.title} <GiArchiveResearch /></h2> : ''}
         <div >{experiencia.description}</div>

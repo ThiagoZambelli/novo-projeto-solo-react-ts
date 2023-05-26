@@ -64,3 +64,22 @@
 
 ## Problema com atom `objeto`
 > Na criação do atom de um objeto para criar os nomes de jogador e personagem estava gerando um erro de typagem pois foi passado como tipo do atomo `object`. Para solucionar, eu criei uma ´interface´ para o atom, passando as chaves e seus tipos e depois passando como tipagem do atom a interface.S
+
+## Suavisando a renderização de componentes:
+> para fazer isso foi passado uma `key` ao componente e posterior mente foi colocado em seu `CSS`:
+  ~~~css
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+
+      @keyframes fadeIn {
+          from {
+              opacity: 0;
+          }
+
+          to {
+              opacity: 1;
+          }
+      }
+  ~~~
+
+> Assim a animação é exxecutada sempre que o valor do componente muda

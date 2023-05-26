@@ -8,6 +8,18 @@
     width: 55%;
     border-left: 2px dashed $color-2-hex;
 
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
     &__race {
         text-align: justify;
         font-size: 1.3rem;
@@ -26,11 +38,12 @@
             border-radius: 1rem;
         }
     }
-    &__habilidadesRace{
+
+    &__habilidadesRace {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;       
+        justify-content: center;
         margin: 2rem 0;
         width: 100%;
 

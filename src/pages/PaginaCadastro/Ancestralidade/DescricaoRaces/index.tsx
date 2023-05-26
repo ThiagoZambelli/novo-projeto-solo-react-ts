@@ -17,12 +17,12 @@ function DescricaoRace() {
 
 
   return (
-    <div className={styles.descricao}>
+    <div className={styles.descricao} key={race.name} >
       <section className={styles.descricao__race}>
         {race.name !== '' ? <h2>{race.name}</h2> : ''}
         <div >{race.description}</div>
       </section>
-      <DescricaoSub />
+      <DescricaoSub key={subRace.name} />
       <section className={styles.descricao__habilidadesRace}>
         {race.name !== '' ? <h2>Habilidades de - {race.name}</h2> : ''}
         <DescricaoHabilidades lista={habilidadesRace} />

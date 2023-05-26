@@ -7,6 +7,7 @@ import { GiAnvilImpact } from 'react-icons/gi'
 import useGravaPaginasCadastro from "state/hooks/useGravaPaginasCadastro";
 
 
+
 export default function FormularioNomes() {
     const [habilitado, setHabilitado] = useState<boolean>(false)
     const listaNomes = usePegaNomes();
@@ -32,7 +33,8 @@ export default function FormularioNomes() {
     return (
         <form className={styles.form} onSubmit={event => proximaPagina(event)}>
             <fieldset className={styles.form__names}>
-                <legend>Names</legend>
+                <legend>Nomes</legend>
+                <p className={styles.form__names__descricao}>O primeiro passo para entrar de cabeça em um mundo de fantasia é decidir o nome que irá encarnar. Isso, não só dirá muito sobre você aos outros, como constantemente lhe acompanhará por sua fantástica aventura!</p>
                 <p className={styles.form__names__descricao}>Digite o nome do Jogador e o nome do seu Personagem para começar.</p>
                 <div className={styles.form__names__inputs}>
                     <InputT campo='nomeJogador' required={true} type="text" label="Nome do Jogador" />

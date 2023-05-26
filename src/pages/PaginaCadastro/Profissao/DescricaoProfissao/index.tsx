@@ -11,7 +11,7 @@ function DescricaoProfissao() {
   const listaHabilidades = usePegaHabilidadesProfissao();  
 
   return (
-    <div className={styles.descricao}>
+    <div className={styles.descricao} key={profissao.name}>
       <section className={styles.descricao__profissao}>
         {profissao.name !== '' ? <h2>{profissao.name} <GiStrong /></h2> : ''}
         <div >{profissao.description}</div>

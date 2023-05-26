@@ -14,7 +14,7 @@ function Descricao({ habilidade }: Props) {
     return (
         <div key={habilidade.name} className={styles.descricao}>
             <h4 onClick={() => setAberto(!aberto)}>{habilidade.name} {aberto ? <BsArrowUpSquareFill /> : <BsArrowDownSquareFill />}</h4>
-            {aberto ? <p>{habilidade.description}</p> : ""}
+            {aberto ? <p key={habilidade.description}>{habilidade.description}</p> : ""}
         </div>)
 }
 
