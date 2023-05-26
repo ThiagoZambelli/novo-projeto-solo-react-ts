@@ -4,6 +4,7 @@ import './index.css';
 import { RecoilRoot } from 'recoil';
 import { BrowserRouter } from 'react-router-dom';
 import Rotas from 'Rotas';
+import ScrollToTop from 'components/ScrollToTop';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -11,6 +12,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <RecoilRoot>
         <Rotas />
       </RecoilRoot>

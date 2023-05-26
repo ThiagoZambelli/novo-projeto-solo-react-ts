@@ -5,6 +5,7 @@ import PaginaIndicie from './PaginaIndice';
 
 function IndiciePaginasCadastro() {
   const paginasJaAcessadas = usePegaPaginas();
+  const grava = paginasJaAcessadas.ancestralidade && paginasJaAcessadas.experiencias && paginasJaAcessadas.profissao;
   
 
   return (
@@ -12,7 +13,7 @@ function IndiciePaginasCadastro() {
       <PaginaIndicie onde='ancestralidade' titulo='Ancestralidade' habilitado={paginasJaAcessadas.ancestralidade} />
       <PaginaIndicie onde='experiencias' titulo='Experiencias' habilitado={paginasJaAcessadas.experiencias} />
       <PaginaIndicie onde='profissao' titulo='Profissao' habilitado={paginasJaAcessadas.profissao} />
-      <PaginaIndicie onde='final' titulo='Final' habilitado={paginasJaAcessadas.final} />
+      <PaginaIndicie grava={grava} onde='final' titulo='Final' habilitado={paginasJaAcessadas.final} />
     </div>
   )
 }

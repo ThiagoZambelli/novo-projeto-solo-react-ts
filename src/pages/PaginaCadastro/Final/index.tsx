@@ -6,9 +6,12 @@ import AncestralidadeF from './AncestralidadeF';
 import ExperienciasF from './ExperienciasF';
 import ProfissaoF from './ProfissaoF';
 
+
 function Final() {
 
-    const personagem = usePegaPersonagem()    
+    const personagem = usePegaPersonagem()
+    
+      
     return (
         <section className={styles.final}>
             <IndiciePaginasCadastro />
