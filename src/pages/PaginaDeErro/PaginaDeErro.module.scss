@@ -1,0 +1,30 @@
+@import 'styles/_variaveis.module.scss';
+
+.erro{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-6-hex;
+    flex-direction: column;
+
+    img{
+        max-width: 80%;
+    }
+    button{
+        font-size: 1.5rem;
+        padding: .4em .8em;
+        border-radius: 1em;
+        background-color: $color-1-hex;
+        color: $color-6-hex;
+        border: 1px solid $color-2-hex;
+        cursor: pointer;
+        transition: .5s;
+
+        &:hover{
+            transform: scale(1.05);
+            border: 2px solid $color-5-hex;
+        }
+    }
+}

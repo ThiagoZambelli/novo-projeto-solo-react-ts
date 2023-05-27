@@ -4,16 +4,20 @@ import styles from './Experiencias.module.scss';
 import SelectExperiencias from './SelectExperiencias';
 import DescricaoExperiencias from './DescricaoExperiencias';
 import BotaoTrocaPagina from './BotaoTrocaPagina';
+import usePegaPaginas from 'state/hooks/usePegaPaginas';
+import PaginaDeErro from 'pages/PaginaDeErro';
 
 function Experiencias() {
+    const paginas = usePegaPaginas()
+
     return (
-        <PaginaCadastro>            
-            <section className={styles.experiencias}>
-                <SelectExperiencias />
-                <DescricaoExperiencias />                
-            </section>
-            <BotaoTrocaPagina />
-        </PaginaCadastro>
+        paginas.ancestralidade ? <PaginaCadastro>            
+        <section className={styles.experiencias}>
+            <SelectExperiencias />
+            <DescricaoExperiencias />                
+        </section>
+        <BotaoTrocaPagina />
+    </PaginaCadastro> : <PaginaDeErro />
     )
 }
 
