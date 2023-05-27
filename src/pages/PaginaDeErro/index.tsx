@@ -10,7 +10,7 @@ function PaginaDeErro() {
     }
   return (
     <section className={styles.erro}>
-        <img src={`assets/img/ops.png`} alt="Algo deu errado" />
+        <img src={`/assets/img/ops.png`} alt="Algo deu errado" />
         <button onClick={voltarAoInicio}>Voltar Ao Inicio</button>
     </section>
   )

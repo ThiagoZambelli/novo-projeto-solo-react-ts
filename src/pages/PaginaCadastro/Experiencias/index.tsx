@@ -1,23 +1,22 @@
-import React from 'react'
 import PaginaCadastro from '..';
 import styles from './Experiencias.module.scss';
 import SelectExperiencias from './SelectExperiencias';
 import DescricaoExperiencias from './DescricaoExperiencias';
 import BotaoTrocaPagina from './BotaoTrocaPagina';
-import usePegaPaginas from 'state/hooks/usePegaPaginas';
 import PaginaDeErro from 'pages/PaginaDeErro';
+import usePegaRace from 'state/hooks/usePegaRace';
 
 function Experiencias() {
-    const paginas = usePegaPaginas()
+    const ancestralidade = usePegaRace();
 
     return (
-        paginas.ancestralidade ? <PaginaCadastro>            
-        <section className={styles.experiencias}>
-            <SelectExperiencias />
-            <DescricaoExperiencias />                
-        </section>
-        <BotaoTrocaPagina />
-    </PaginaCadastro> : <PaginaDeErro />
+        ancestralidade.name !== '' ? <PaginaCadastro>
+            <section className={styles.experiencias}>
+                <SelectExperiencias />
+                <DescricaoExperiencias />
+            </section>
+            <BotaoTrocaPagina />
+        </PaginaCadastro> : <PaginaDeErro />
     )
 }
 
