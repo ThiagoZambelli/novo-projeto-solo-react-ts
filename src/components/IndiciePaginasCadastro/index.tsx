@@ -1,6 +1,7 @@
 import usePegaPaginas from 'state/hooks/usePegaPaginas'
 import styles from './IndiciePaginasCadastro.module.scss';
 import PaginaIndicie from './PaginaIndice';
+import { memo } from 'react';
 
 
 function IndiciePaginasCadastro() {
@@ -18,4 +19,4 @@ function IndiciePaginasCadastro() {
   )
 }
 
-export default IndiciePaginasCadastro
+export default memo(IndiciePaginasCadastro);

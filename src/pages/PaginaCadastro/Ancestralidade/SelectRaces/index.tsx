@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, memo } from 'react'
 import races from 'assets/db/races.json';
 import useGravaRace from 'state/hooks/useGravaRace';
 import styles from './SelectRaces.module.scss';
@@ -42,4 +42,4 @@ function SelectRaces() {
     )
 }
 
-export default SelectRaces
+export default memo(SelectRaces)
