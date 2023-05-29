@@ -3,7 +3,8 @@ import listaExperiencias from 'assets/db/bg.json';
 import styles from './SelectExperiencias.module.scss';
 import usePegaExperiencia from 'state/hooks/usePegaExperiencia';
 import useGravaExperiencia from 'state/hooks/useGravaExperiencia';
-import {BsFillCaretRightFill} from 'react-icons/bs'
+import { BsFillCaretRightFill } from 'react-icons/bs'
+import { memo } from 'react'
 
 function SelectExperiencias() {
 
@@ -14,7 +15,7 @@ function SelectExperiencias() {
     const mudaValor = (evento: React.ChangeEvent<HTMLSelectElement>) => {
         setExperienciaAtual(evento.target.value)
         gravaExperiencia(evento.target.value)
-    }  
+    }
 
     return (
         <section className={styles.selectExperiencias}>
@@ -27,10 +28,10 @@ function SelectExperiencias() {
                 <select value={experienciaAtual} onChange={mudaValor}>
                     {experiencia.title === '' ? <option> ---- </option> : ''}
                     {listaExperiencias.map(experiencia => (<option value={experiencia.title} key={experiencia.title}>{experiencia.title}</option>))}
-                </select>                
-            </div>            
+                </select>
+            </div>
         </section>
     )
 }
 
-export default SelectExperiencias
+export default memo(SelectExperiencias)

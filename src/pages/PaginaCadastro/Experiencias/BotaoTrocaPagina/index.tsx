@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { GiDropWeapon } from 'react-icons/gi';
 import useGravaPaginasCadastro from 'state/hooks/useGravaPaginasCadastro';
 import usePegaExperiencia from 'state/hooks/usePegaExperiencia';
-
+import { memo } from 'react'
 
 function BotaoTrocaPagina() {
     const experiencias = usePegaExperiencia();
@@ -28,4 +28,4 @@ function BotaoTrocaPagina() {
     )
 }
 
-export default BotaoTrocaPagina
+export default memo(BotaoTrocaPagina)

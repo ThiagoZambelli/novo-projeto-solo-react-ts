@@ -9,6 +9,10 @@ import ISubRace from 'Interfaces/ISubRace';
 import { atom } from 'recoil';
 
 
+export const error = atom<string>({
+    key: 'error',
+    default: ''
+})
 
 export const profissao = atom<IProfissao>({
     key: 'profissao',
