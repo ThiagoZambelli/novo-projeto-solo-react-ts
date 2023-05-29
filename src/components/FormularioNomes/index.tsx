@@ -1,6 +1,6 @@
 import InputT from "components/InputT";
 import styles from './FormularioNomes.module.scss';
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import usePegaNomes from "state/hooks/usePegaNomes";
 import { useNavigate } from "react-router-dom";
 import { GiAnvilImpact } from 'react-icons/gi'
@@ -28,7 +28,7 @@ export default function FormularioNomes() {
         gravaPagina('ancestralidade')
         trocaPagina('/forja/ancestralidade')
     }
-
+    const icone = useMemo(() => <GiAnvilImpact />, [])
 
     return (
         <form className={styles.form} onSubmit={event => proximaPagina(event)}>
@@ -43,7 +43,7 @@ export default function FormularioNomes() {
                 <button
                     disabled={!habilitado}
                     className={`${styles.botao} ${habilitado ? styles.botao__habilitado : ''}`}
-                >Iniciar Criação <GiAnvilImpact /></button>
+                >Iniciar Criação {icone}</button>
             </fieldset>
         </form>
     )

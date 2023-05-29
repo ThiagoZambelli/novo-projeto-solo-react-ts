@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { memo, useState } from 'react';
 import styles from './InputT.module.scss';
 import useGravaNomes from 'state/hooks/useGravaNomes';
 
@@ -9,7 +9,7 @@ interface IInputT {
     campo: string 
 }
 
-export default function InputT({ campo, type, label, required = false }: IInputT) {
+function InputT({ campo, type, label, required = false }: IInputT) {
 
     const [value, setValue] = useState('')
     const setNomes = useGravaNomes()
@@ -41,3 +41,5 @@ export default function InputT({ campo, type, label, required = false }: IInputT
         </div>
     )
 }
+
+export default memo(InputT)

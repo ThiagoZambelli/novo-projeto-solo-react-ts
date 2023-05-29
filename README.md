@@ -84,4 +84,11 @@
 
 > Assim a animação é exxecutada sempre que o valor do componente muda
 
-> A propriedade `animation` aplica uma animação ao elemento. Nesse caso, a animação é chamada de `fadeIn`. O valor `1s` define a duração da animação, que é de 1 segundo. O valor `ease-in-out` especifica a curva de aceleração da animação, começando devagar, acelerando no meio e diminuindo novamente no final. O valor `forwards` faz com que o estado final da animação seja mantido após a conclusão. 
+> A propriedade `animation` aplica uma animação ao elemento. Nesse caso, a animação é chamada de `fadeIn`. O valor `1s` define a duração da animação, que é de 1 segundo. O valor `ease-in-out` especifica a curva de aceleração da animação, começando devagar, acelerando no meio e diminuindo novamente no final. O valor `forwards` faz com que o estado final da animação seja mantido após a conclusão.
+
+## Re-renderização desnecessaria de icones do `react-icons`:
+> Para corrigir a re-renderização desnecessaria foi utilizado o hook `useMemo` que tem como primeiro parametro uma função anonima retornando o icone e como segundo paramtro um array com os elemntos que poderim disparar a re-renderização caso fosse necessario.
+  - E.X:
+  ~~~JavaScript
+    const icone = useMemo(() => <Icone />, [])
+  ~~~

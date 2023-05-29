@@ -1,4 +1,4 @@
-import React from 'react'
+import { memo } from 'react'
 import usePegaRace from 'state/hooks/usePegaRace'
 import styles from './DescricaoRace.module.scss';
 import DescricaoSub from '../DescricaoSub';
@@ -37,4 +37,4 @@ function DescricaoRace() {
   )
 }
 
-export default DescricaoRace
+export default memo(DescricaoRace)

@@ -3,6 +3,7 @@ import { BsFillRecordCircleFill } from 'react-icons/bs';
 import styles from './PaginaIndice.module.scss';
 import { useNavigate } from 'react-router-dom';
 import useGravaPersonagem from 'state/hooks/useGravaPersonagem';
+import { memo, useMemo } from 'react';
 
 
 interface IProps {
@@ -13,26 +14,28 @@ interface IProps {
 }
 
 
-function PaginaIndicie({ titulo, habilitado, onde, grava }: IProps) {  
+function PaginaIndicie({ titulo, habilitado, onde, grava }: IProps) {
   const navegar = useNavigate()
   const gravaPersonagem = useGravaPersonagem()
 
   const irPara = (onde: string) => {
-    if(grava){
+    if (grava) {
       gravaPersonagem()
-    }   
-    navegar(`/forja/${onde}`)    
+    }
+    navegar(`/forja/${onde}`)
   }
+  const iconeLinha = useMemo(() => <AiOutlineLine />, [])
+  const iconeBolinha = useMemo(() => <BsFillRecordCircleFill />, [])
 
 
   return (
     <div onClick={() => irPara(onde)} className={`${styles.pagina} ${habilitado ? styles.habilitado : ''}`}>
       {titulo}
-      <AiOutlineLine />
-      <BsFillRecordCircleFill />
-      {titulo === 'Final' ? '' : <AiOutlineLine />}
+      {iconeLinha}
+      {iconeBolinha}
+      {titulo === 'Final' ? '' : iconeLinha}
     </div>
   )
 }
 
-export default PaginaIndicie
+export default memo(PaginaIndicie)

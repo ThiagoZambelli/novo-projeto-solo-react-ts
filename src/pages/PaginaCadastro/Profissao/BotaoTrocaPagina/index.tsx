@@ -5,6 +5,7 @@ import useGravaPaginasCadastro from 'state/hooks/useGravaPaginasCadastro';
 import usePegaProfissao from 'state/hooks/usePegaProfissao';
 import usePegaPaginas from 'state/hooks/usePegaPaginas';
 import useGravaPersonagem from 'state/hooks/useGravaPersonagem';
+import {useMemo} from 'react';
 
 
 function BotaoTrocaPagina() {
@@ -20,6 +21,7 @@ function BotaoTrocaPagina() {
         trocaPagina('/forja/final')
         gravaPersonagem();
     }
+    const icone = useMemo(() => <GiBeamsAura />, [])
 
     return (
         <div>
@@ -27,7 +29,7 @@ function BotaoTrocaPagina() {
                 ? <button
                     onClick={mudaDepagina}
                     className={styles.botao}
-                >Final <GiBeamsAura /></button>
+                >Final {icone}</button>
                 : <h3 className={styles.alert}>Esta Faltando Alguma Coisa para Finalizar!</h3>}
         </div>
     )

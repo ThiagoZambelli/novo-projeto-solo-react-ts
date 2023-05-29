@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { GiDropWeapon } from 'react-icons/gi';
 import useGravaPaginasCadastro from 'state/hooks/useGravaPaginasCadastro';
 import usePegaExperiencia from 'state/hooks/usePegaExperiencia';
-import { memo } from 'react'
+import { memo, useMemo } from 'react'
 
 function BotaoTrocaPagina() {
     const experiencias = usePegaExperiencia();
@@ -15,6 +15,7 @@ function BotaoTrocaPagina() {
         gravaPagina('profissao')
         trocaPagina('/forja/profissao')
     }
+    const icone = useMemo(() => <GiDropWeapon />, [])
 
     return (
         <div>
@@ -22,10 +23,10 @@ function BotaoTrocaPagina() {
                 ? <button
                     onClick={mudaDepagina}
                     className={styles.botao}
-                >Profissão <GiDropWeapon /></button>
+                >Profissão {icone}</button>
                 : ''}
         </div>
     )
 }
 
-export default memo(BotaoTrocaPagina)
+export default BotaoTrocaPagina
