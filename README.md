@@ -92,3 +92,18 @@
   ~~~JavaScript
     const icone = useMemo(() => <Icone />, [])
   ~~~
+
+## Evitando carregamento desnecessario:
+> Para evitar o carregamento desnecessario de paginas que nem foram acessadas ainda, utilizamos o `lazy` somado ao `Suspense`, onde o lazy é um metodo do proprio React para fazer a importação lenta de componentes, ou seja, importa somente quando o componente for chamado. E o `Suspense` é um componente do proprio React que funciona como uma "Tela de carregamento", ele é o que vai ser exibido enquanto o import do `lazy` é feito.
+  ~~~JavaScript
+      // Aqui vemos uma importação com o lazy, onde ele recebe uma função anonima com um import
+      const ComponenteExemplo = lazy(() => import('exemplos/ComponenteExemplo'));
+
+
+      // Aqui vemos o suspense que recebe como fallback o que sera exibido enquanto carrega
+      <Suspense fallback={<Carregando />}>
+            <Routes>                
+                <Route path='*' element={<ComponenteExemplo />} />
+            </Routes>
+        </Suspense>
+  ~~~
