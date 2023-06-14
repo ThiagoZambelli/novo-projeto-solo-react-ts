@@ -8,7 +8,10 @@ import IRaces from 'Interfaces/IRaces';
 import ISubRace from 'Interfaces/ISubRace';
 import { atom } from 'recoil';
 
-
+export const loagdo = atom<boolean>({
+    key: 'loagdo',
+    default: false
+})
 export const error = atom<string>({
     key: 'error',
     default: ''
