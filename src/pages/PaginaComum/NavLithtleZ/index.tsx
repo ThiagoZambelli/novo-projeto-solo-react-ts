@@ -32,13 +32,13 @@ function NavLithtleZ() {
                         <img src={logo} alt='Logo do LiththleZ' />
                     </h1>
                     <nav>
-                        <div className={styles.header__links}>
+                        <div className={styles.links}>
                             <LinkNav to='https://novo-projeto-solo-react-ts.vercel.app/' id='forjaDeLendas' nome='Forja de Lendas' />
                             <LinkNav to='https://goblin-caolho.vercel.app/' id='goblinCaolho' nome='Goblin Caolho' />
                             <LinkNav to='#' id='favoritos' nome='Favoritos' />
                         </div>
                         {logado
-                            ? <div>
+                            ? <div className={styles.ancora}>
                                 <Link to={"#"}>Meu perfil</Link>
                             </div>
                             : <div>
